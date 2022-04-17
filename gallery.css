@@ -1,0 +1,548 @@
+/*this is for all sub pages from index.html*/
+
+/*importing font familes*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+  --green: #27ae60;
+  --black: #444;
+  --light-color: #777;
+  --bg-color: #e6e6e6;
+  --bg-colour-btn: #010203;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  --box-shadow: 0.4rem 0.4rem 1rem #ccc, -0.4rem -0.4rem 1rem #fff;
+  --box-shadow-inset: 0.4rem 0.4rem 1rem #ccc inset,
+    -0.4rem -0.4rem 1rem #fff inset;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--bg-color);
+  padding: 1rem;
+}
+/*for dark mode*/
+body.active {
+  --black: #fff;
+  --light-color: #ddd;
+  --bg-color: #222;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.4);
+  --box-shadow: 0.4rem 0.4rem 1rem #111, -0.4rem -0.4rem 1rem #333;
+  --box-shadow-inset: 0.4rem 0.4rem 1rem #111 inset,
+    -0.4rem -0.4rem 1rem #333 inset;
+}
+section {
+  min-height: auto;
+  padding: 2rem;
+}
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  background: none;
+  color: var(--black);
+  box-shadow: var(--box-shadow);
+}
+.btn:hover {
+  box-shadow: var(--box-shadow-inset);
+  color: var(--green);
+}
+
+.heading {
+  text-align: center;
+  font-size: 5rem;
+  color: var(--black);
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+
+.heading span {
+  color: var(--green);
+  text-transform: uppercase;
+}
+/*-------heading at centre of the page---------*/
+.header {
+  background: var(--bg-color);
+  height: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+.header .user img {
+  /*profile phot*/
+  margin: 1rem 0;
+  border: 1rem solid transparent;
+  border-radius: 50%;
+  width: 25rem;
+  height: 25rem;
+  box-shadow: var(--box-shadow);
+  transition: 0.5s ease-in-out;
+}
+.header .user img:hover {
+  transform: scale(1.2);
+}
+/*name of user*/
+.header .user h3 {
+  color: var(--black);
+  font-size: 4.5rem;
+}
+.header .user p {
+  color: var(--green);
+  font-size: 2.5rem;
+}
+
+
+
+
+/*main home start from here*/
+.home {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.home .content h3 {
+  font-size: 7rem;
+  color: var(--black);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.home .content p {
+  font-size: 2rem;
+  color: var(--green);
+  padding-bottom: 0.5rem;
+}
+.home .share {
+  position: relative;
+  top: 10rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+}
+.home .share a {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  box-shadow: var(--box-shadow);
+  margin: 0.5rem;
+  font-size: 2rem;
+  color: var(--black);
+  border-radius: 5rem;
+}
+.home .share a:hover {
+  box-shadow: var(--box-shadow-inset);
+  color: var(--green);
+}
+/*main home end here*/
+
+
+/*gallery grid section start here*/
+.gallerybox .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: rem;
+  border-top: 0.1rem solid var(--green);
+}
+
+.gallerybox .row .content {
+  flex: 1 1 40rem;
+}
+
+.gallerybox .row .content h3 {
+  font-size: 2.5rem;
+  color: var(--black);
+  line-height: 1.8;
+}
+
+.gallerybox .row .content h3 span {
+  color: var(--green);
+}
+.gallerybox .row .content h4 {
+  font-size: 1.8rem;
+  color: var(--black);
+  line-height: 1;
+}
+.gallerybox .row .content h4 span {
+  color: var(--green);
+}
+
+.gallerybox .row .content p {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  line-height: 1.8;
+  padding: 1rem 0;
+  text-align: justify;
+  text-justify: inter-word;
+}
+/*education and experiance detailed section end here*/
+
+/*education and experiance detailed section image attached start from here*/
+
+.glryimg .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 2rem;
+}
+
+.glryimg .box-container .box {
+  height: 25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  border: 1rem solid transparent;
+}
+
+.glryimg .box-container .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+}
+.glryimg .box-container .box img:hover {
+  transform: scale(1.05);
+}
+/* for yt links adding on experience tab*/
+.glryimg .box-container .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: none;
+  display: grid;
+  place-items: center;
+  transform: scale(0);
+}
+
+.glryimg .box-container .box:hover .content {
+  transform: scale(1);
+}
+
+.glryimg .box-container .box .content h3 {
+  font-size: 2.5rem;
+  color: white;
+  text-transform: uppercase;
+  transform: translateY(-5rem);
+  opacity: 0;
+  transition-delay: 0.3s;
+}
+
+.glryimg .box-container .box:hover .content h3 {
+  transform: translateY(0rem);
+  opacity: 1;
+  text-align: center;
+}
+.glryimg .box-container .box .content .work-link {
+  display: inline-flex;
+  font-size: 2.5rem;
+  width: 10rem;
+  height: 5.5rem;
+  border-radius: 1rem;
+  background: RED;
+  color: white;
+  padding: 0.45rem;
+  margin-top: 7rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/* for yt links adding on experience tab end*/
+
+/*education and experiance detailed section image attached end here*/
+
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 20%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  object-fit: cover;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+  margin-bottom: 2rem;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(252, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a background color with a little bit see-through */
+.prev:hover {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+.next:hover {
+  background-color: rgba(83, 249, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  background-color: grey;
+  font-size: 1rem;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  font-size: 2rem;
+  padding: 2px 16px;
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*galley ends*/
+
+
+/*-contact section starts---*/
+.contact form {
+  margin: 1rem auto;
+  max-width: 70rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+}
+
+.contact form .box {
+  padding: 1rem 1.5rem;
+  width: 100%;
+  background: none;
+  color: var(--black);
+  font-size: 1.6rem;
+  text-transform: none;
+  margin: 0.7rem 0;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+}
+
+.contact form textarea {
+  height: 20rem;
+  resize: none;
+}
+
+.contact form .box:focus {
+  box-shadow: var(--box-shadow-inset);
+}
+/*-contact section end---*/
+/*Back to top button starts here*/
+.scrollTop {
+  position: fixed;
+  bottom: 800rem;
+  right: 2rem;
+  padding: 10px 15px;
+  background-color: var(--bg-color);
+  color: var(--black);
+  box-shadow: var(--box-shadow);
+  transition: all 0.5s ease 0s;
+  z-index: 999;
+  border-radius: 50%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.scrollTop.active {
+  bottom: 2rem;
+  visibility: visible;
+  opacity: 1;
+}
+.scrollTop:hover {
+    box-shadow: var(--box-shadow-inset);
+    
+  }
+/*Back to top button starts here*/
+
+/*credits section start*/
+.credits {
+  font-size: 2rem;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  margin-top: 1rem;
+  border-top: var(--border);
+  color: var(--black);
+}
+
+.credits span {
+  color: var(--green);
+}
+/*-credits section end*/
+
+/*form submission page customization*/
+.form-submit {
+  align-items: center;
+  justify-items: center;
+  font-size: 3rem;
+  text-align: center;
+  padding: 2rem;
+  margin: 1rem;
+  box-shadow: var(--box-shadow);
+  color: var(--black);
+  height: 40vh;
+}
+.form-submit span {
+  color: var(--green);
+  font-weight: 900;
+}
+.form-submit p {
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+/*form submission end*/
+
+/* media queries */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  body {
+    padding-left: 0;
+  }
+
+  .header {
+    left: -110%;
+  }
+
+  .header.active {
+    left: 0%;
+    transition: 0.5s linear;
+  }
+
+  /*#menu-btn {
+    display: initial;
+  }*/
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .header {
+    width: 100%;
+    border-right: 0;
+  }
+
+  /* #menu-btn{
+        display:;
+    } */
+}
+/* media queries ends */
